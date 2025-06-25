@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="./image/tomsk_flag_2019-1024x683.png" alt="Логотип Томска" width="40"></a>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="history.html">История</a></li>
+        <li><a href="places.html">Места</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+
+      <div class="burger" onclick="toggleMenu()" id="burgerMenu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+<body>
+ <main class="gallery-section">
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="./image/Томск с высоты.jpeg" alt="Томск с высоты" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/Городской сад.jpg" alt="Городской сад" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/Сибгму.jpg" alt="СИБГМУ" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/Набережная.jpg" alt="Набережная" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/НТБ.jpg" alt="НТБ" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/Антон чехов памятник.jpg" alt="Памятник Антону Чехову" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/скульптура три медведя.jpg " alt="Скульптура 'Три медведя'" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/памятник Пушкину.jpg " alt="Памятник А.С. Пушкину" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/Петропавловский собор.jpg" alt="Петропавловский Собор" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/памятник лягушки путешественнице.jpg" alt="Памятник лягушке-путешественнице" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/проспект ленина.jpg" alt="Проспект Ленина" onclick="openModal(this.src)">
+      </div>
+      <div class="gallery-item">
+        <img src="./image/ТПУ томск галерея.jpg" alt="Томский Политехнический университет" onclick="openModal(this.src)">
+      </div>
+    </div>
+  </main>
+
+  <!-- Модальное окно -->
+  <div id="myModal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="img01" alt="Увеличенное фото">
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 История Томска | Все права защищены</p>
+  </footer>
+
+  <!-- JavaScript для модального окна -->
+  <script>
+    const modal = document.getElementById("myModal");
+    const modalImg = document.getElementById("img01");
+
+    function openModal(src) {
+      modal.style.display = "block";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    // Закрытие по клику вне изображения
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+<script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

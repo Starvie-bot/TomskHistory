@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История Томска</title>
+    <link rel ='stylesheet' href="./style/style.css">
+<style>
+  .history-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  margin-top: 2rem;
+  animation: fadeInUp 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Текст слева */
+.block-text {
+  flex: 1 1 45%;
+  max-width: 600px;
+}
+
+.block-text h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.block-text h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 4px;
+  background-color: #2c3e50;
+  border-radius: 2px;
+}
+
+.block-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #34495e;
+  margin-bottom: 1.5rem;
+}
+
+/* Изображение справа */
+.block-image {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.block-image img {
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.block-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Анимация с задержкой для каждого блока */
+.history-block:nth-child(1) { animation-delay: 0.2s; }
+.history-block:nth-child(2) { animation-delay: 0.4s; }
+.history-block:nth-child(3) { animation-delay: 0.6s; }
+.history-block:nth-child(4) { animation-delay: 0.8s; }
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .history-block {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .block-text,
+  .block-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .block-image img {
+    max-width: 100%;
+  }
+
+  .block-text h2::before {
+    left: 0.5rem;
+    top: 1rem;
+    height: 2rem;
+  }
+}
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+ <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="./image/tomsk_flag_2019-1024x683.png" alt="Логотип Томска" width="40"></a>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="history.html">История</a></li>
+        <li><a href="places.html">Места</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+
+      <div class="burger" onclick="toggleMenu()" id="burgerMenu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Геро-секция -->
+  <section class="hero">
+    <div>
+      <h1>История Томска</h1>
+      <p>От основания до наших дней</p>
+    </div>
+  </section>
+
+  <!-- Основной контент -->
+  <!-- Основной контент -->
+<main>
+  <!-- Блок 1 -->
+  <section class="history-block">
+    <div class="block-text">
+      <h2>Основание Томска (1604 год)</h2>
+      <p>Томск был заложен в 1604 году по указу царя Бориса Годунова как деревянная крепость на берегу реки Томь. Город стал важным форпостом на южных рубежах Русского государства.</p>
+      <p>Первоначально население составляли казаки, служилые люди и их семьи. Это был небольшой укреплённый посёлок, который со временем превратился в административный и торговый центр.</p>
+    </div>
+    <div class="block-image">
+      <img src="./image/old tomsk.jpg" alt="Древний Томск">
+    </div>
+  </section>
+
+  <!-- Блок 2 -->
+  <section class="history-block">
+    <div class="block-text">
+      <h2>XVIII век: Эпоха торговли и развития</h2>
+      <p>В XVIII веке Томск становится крупным торговым узлом. Через него проходят караваны с товарами из Китая, Средней Азии и Европы. Появляются первые каменные здания.</p>
+      <p>Город развивается как культурный и образовательный центр Сибири. Открываются школы, библиотеки, типографии. Томск становится местом ссылки декабристов.</p>
+    </div>
+    <div class="block-image">
+      <img src="./image/18vek.jpg " alt="Томск XVIII века">
+    </div>
+  </section>
+
+  <!-- Блок 3 -->
+  <section class="history-block">
+    <div class="block-text">
+      <h2>XIX век: Расцвет культуры и образования</h2>
+      <p>В XIX веке Томск превращается в один из главных научных и образовательных центров Сибири. Здесь создаётся Томская мужская гимназия и первый в Сибири музей.</p>
+      <p>Появляются частные библиотеки, начинается строительство архитектурных памятников, которые сохранились до наших дней.</p>
+    </div>
+    <div class="block-image">
+      <img src="./image/19vek.jpg " alt="Томск XIX века">
+    </div>
+  </section>
+
+  <!-- Блок 4 -->
+  <section class="history-block">
+    <div class="block-text">
+      <h2>XX век: Научный и образовательный центр</h2>
+      <p>После революции Томск остаётся важным научным и образовательным центром. В 1916 году здесь открывается Томский государственный университет — первый в Сибири.</p>
+      <p>Во время войны Томск становится эвакуационным центром. Здесь создаются институты, лаборатории, проводятся исследования в области физики, математики и химии.</p>
+    </div>
+    <div class="block-image">
+      <img src="./image/20vek.png" alt="Томск XX века">
+    </div>
+  </section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 История Томска | Все права защищены</p>
+  </footer>
+<script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

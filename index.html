@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Томск - город истории</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="./image/tomsk_flag_2019-1024x683.png" alt="Логотип Томска" width="40"></a>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="history.html">История</a></li>
+        <li><a href="places.html">Места</a></li>
+        <li><a href="gallery.html">Галерея</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+
+      <div class="burger" onclick="toggleMenu()" id="burgerMenu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Добро пожаловать в Томск</h1>
+      <p>Город с богатой историей и культурным наследием</p>
+    </div>
+  </section>
+
+  <!-- Основное содержание -->
+  <main>
+    <section class="about-tomsk">
+      <h2>О Томске</h2>
+      <p>Томск — один из старейших городов Сибири, основанный по указу царя Бориса Годунова в 1604 году. Город был заложен как крепость для защиты южных границ Русского государства.</p>
+      <p>Сегодня Томск — это крупный научный, образовательный и культурный центр Сибири. Здесь находятся одни из самых престижных университетов России, включая Томский государственный университет и Томский политехнический университет.</p>
+      <p>Томск славится своими архитектурными памятниками, музеями, библиотеками и активной культурной жизнью. Город часто называют "Сибирской Афиной".</p>
+    </section>
+
+    <!-- Факты о Томске -->
+    <section class="facts">
+      <h3>Интересные факты</h3>
+      <ul class="fact-list">
+        <li>Основан в 1604 году — самый старый город Сибири.</li>
+        <li>В Томске расположено более 50 высших учебных заведений.</li>
+        <li>Томск — родина знаменитого кинофестиваля «Окно в Европу».</li>
+        <li>В XIX веке Томск был административным центром Восточной Сибири.</li>
+        <li>В городе сохранилось около 1000 памятников деревянного зодчества.</li>
+      </ul>
+    </section>
+
+    <section class="cards">
+      <h2>Популярные места</h2>
+      <div class="card-container">
+
+        <!-- Картинка вместо текстовой ссылки -->
+        <a href="places.html">
+          <img src="./image/тгу.jpg" alt="Томский государственный университет">
+          <p>Томский государственный университет</p>
+        </a>
+
+        <a href="places.html">
+          <img src="./image/тпу.jpg" alt="Томский политехнический университет">
+          <p>Томский политехнический университет</p>
+        </a>
+
+        <a href="places.html">
+          <img src="./image/сад.jpg" alt="Старинные особняки">
+          <p>Лагерный сад</p>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 История Томска | Все права защищены</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
