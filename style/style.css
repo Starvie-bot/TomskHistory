@@ -87,14 +87,6 @@ header {
   animation: slideDown 0.3s ease-in-out;
 }
 
-@keyframes slideDown {
-  from { transform: translateY(-10px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* Медиа-запросы */
-
-/* Синтаксис 1: max-width */
 @media screen and (max-width: 768px) {
   .burger {
     display: flex;
@@ -132,18 +124,6 @@ header {
   to { opacity: 1; transform: translateY(0); }
 }
 
-
-.intro {
-  margin-bottom: 2rem;
-}
-
-.highlight {
-  background-color: #fffbe6;
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 1rem;
-}
 
 /* Карточки */
 .cards h2 {
