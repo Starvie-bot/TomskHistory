@@ -1,6 +1,8 @@
-
-
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -185,9 +187,19 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  
+}
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+main {
+  flex: 1;
+  padding-top: 70px; /* Подстраивается под высоту header */
+}
 .about-tomsk {
       padding: 2rem 1rem;
       max-width: 1200px;
