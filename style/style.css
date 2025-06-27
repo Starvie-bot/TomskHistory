@@ -11,7 +11,7 @@ body {
 }
   .hero {
   background: url('e22ys16i67swgww0sss0go8k8.jpg') no-repeat center center/cover;
-  min-height: 30vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,13 +111,6 @@ header {
   }
 }
 
-/* Синтаксис 2: orientation + min/max-device-width */
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(30px); }
