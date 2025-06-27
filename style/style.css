@@ -274,10 +274,6 @@ main {
   cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-  text-decoration: none;
-}
 
      /* Анимация появления фото  */
     @keyframes fadeInUp {
