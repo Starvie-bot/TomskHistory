@@ -159,7 +159,6 @@ footer {
   
 }
 body {
-  font-family: Arial, sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -178,13 +177,6 @@ main {
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-.about-tomsk h2 {
-      margin-bottom: 1rem;
-    }
-
- .about-tomsk p {
-      margin-bottom: 1rem;
-    }
 
 .facts {
       background: #ecf0f1;
@@ -195,10 +187,6 @@ main {
       margin: 2rem auto;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
 
-    }
-
-.facts h3 {
-      margin-bottom: 1rem;
     }
 
 .fact-list {
